@@ -1,0 +1,112 @@
+print("Welcome to my first game!")
+name = input("What is your name? ")
+print("Hello",name)
+age = int(input("what is your age? "))
+health = 15
+if age >= 18:
+  print("yes,your eligible to play!")
+
+  wants_play = input("Do you want to play? ").lower()
+  if wants_play == "yes":
+    print("Lets play!!")
+    print("your health = 15")
+    print("you have two ways to proceed")
+    run = input("you have to choose one way (without air/water) ")
+    if run == "water" or "Water" :
+          print("good decision,you can swim")
+          print("you have now another ways to reach your destination")
+          run = input("another ways are (house/garden) ")
+          if run == "house":
+            print("wrong way!")
+            print("you lose your health due to beaten by owner")
+            health -= 5
+            print("health",health)
+            run = input("you are at last decision between two (monkey/donkey)")
+            if run == "monkey":
+              print("you won")
+              print("game over!")
+            elif run == "donkey":
+              print("bad way")
+              health -=5
+              print("game over!")
+              if health <= 0:
+                print("you lost the game...")
+              else:
+                print("you won")
+              
+            else:
+              print("you lost")  
+          elif run == "garden":
+            print("good way")
+            run = input("you are at last decision between two (monkey/donkey)")
+            if run == "monkey":
+              print("you won")
+              print("game over!")
+            elif run == "donkey":
+              print("bad way")
+              health -=5
+              print("game over!")
+              if health <= 0:
+                print("you lost the game...")
+              else:
+                print("you won!!")
+
+              
+            else:
+              print("you lost")
+          else:
+            print("you lost")  
+    elif run == "without air":
+          print("wrong way")
+          health -=5
+          print("you lost your health due to decrease in oxygen level of your body")
+          print("you have now another ways to reach your destination")
+          run = input("another ways are (house/garden)")
+          if run == "house":
+            print("wrong way!")
+            
+            print("you lose your health due to beaten by owner") 
+          health -= 5
+          run = input("you are at last decision between two (moneky/donkey) ")
+          if run == "monkey":
+              print("you won")
+              print("game over!")
+          elif run == "donkey":
+            
+              print("bad way")
+              health -=5
+              print("game over!")
+              if health <= 0:
+                print("you lost the game...")
+              else:
+                print("you won!!")
+              
+          elif run == "garden":
+            print("god way")
+            print("your now at last two decisions(monkey/donkey)")
+            if run == monkey:
+                print("you won")
+                print("gme over!")
+            elif run == donkey:
+                print("bad way")
+                health -= 5
+                print("game over!")
+                if health <=0:
+                  print("you lose the game...")
+                else:
+                  print("you won!!")
+
+          else:
+              print("you lost")  
+
+    
+
+    else:
+          print("you lost..!")
+  else:
+    print("Thanks for giving your response!....cyaa")
+
+else:
+  print("No, your not eligible to play...")
+  
+print("health",health)
